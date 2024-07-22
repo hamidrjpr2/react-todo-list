@@ -1,4 +1,4 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/hamidrjpr2/keyboard?style=flat&logo=star) ![GitHub language count](https://img.shields.io/github/languages/count/hamidrjpr2/keyboard?color=%23c1121f) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/hamidrjpr2/keyboard)
+![GitHub Repo stars](https://img.shields.io/github/stars/hamidrjpr2/react-todo-list?style=flat&logo=star) ![GitHub language count](https://img.shields.io/github/languages/count/hamidrjpr2/react-todo-list?color=%23c1121f) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/hamidrjpr2/react-todo-list)
 
 # Todo-list `React`
 
