@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3F4F6;
+}
+
+@font-face {
+    font-family: 'Poet';
+    src: url('../fonts/PoetsenOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lalezr';
+    src: url('../fonts/Lalezar-Regular.ttf');
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: clamp(370px, 30%, 800px);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 150px auto;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+
+    >.search-bar {
+        width: 100%;
+        display: flex;
+        margin: 25px 0;
+
+
+        >input {
+            width: 20%;
+            display: flex;
+            font-family: Poet , Lalezar;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            padding: 8px 10px;
+        }
+    }
+
+    >h1 {
+        font-family:Helvetica, sans-serif;
+        color: rgb(147 51 234);
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+
+    > .form {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        > .add-task {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            font-size: 16px;
+            padding: 20px 5px;
+            font-family: Poet , Lalezar;
+            outline: none;
+            border: 1px solid #afafaf;
+            transition: .3s;
+        }
+
+        >.add-task-btn {
+            background: white;
+            width: 10%;
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid #6e6d6d;
+            margin-top: 10px;
+            font-weight: bolder;
+            font-family: Poet , Lalezar;
+            font-size: 16px;
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                width: 20%;
+            }
+            &:focus {
+                border: none;
+                border-bottom: 1px solid #6e6d6d;
+                outline: none;
+                width: 20%;
+            }
+        }
+    }
+
+    .todo-list {
+        width: 100%;
+        margin-top: 10px;
+
+        >ul {
+            >li {
+                list-style-type: none;
+                font-family: Poet , Lalezar;
+                margin: 10px 5px;
+                background: white;
+                padding: 20px 10px;
+                border-bottom: 1px solid gray;
+                display: flex;
+                transition: .4s;
+                position: relative;
+
+                
+                &:hover {
+                    transform: scale(1.022);
+                }
+
+                >div {
+                    &:has(div>label>input:checked) > h5{
+                        text-decoration: line-through;
+                        color: #8c8c8c;
+                    }
+                    text-decoration: none;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 100%;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+
+
+                        > label {
+                            margin: 0 10px;
+                            > input {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                        >i {
+                            cursor: pointer;
+                            font-size: 20px;
+                            color: #8c8c8c;
+                            margin: 0 5px;
+                            transition: .3s;
+
+                            &:first-of-type{
+                                color: red;
+                            }
+                            &:last-of-type{
+                                color: green;
+                            }
+                        }
+                    }
+                    
+                    >.content-edit {
+                        padding: 7px;
+                        font-family: Poet , Lalezar;
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        outline: none;
+                        width: 80%;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+}
